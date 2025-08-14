@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .quote-section {
+        background: white;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #0077b6;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        background: #0077b6;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background: #023e8a;
+    }
+
+    .success-message {
+        display: none;
+        margin-top: 10px;
+        color: green;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="quote-section">
+    <h2>Get a Quote</h2>
+    <form id="quoteForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="service">Service Type</label>
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="Laptop Repair">Laptop Repair</option>
+            <option value="Tablet Repair">Tablet Repair</option>
+            <option value="Software Update">Software Update</option>
+            <option value="Data Recovery">Data Recovery</option>
+            <option value="Screen Replacement">Screen Replacement</option>
+        </select>
+
+        <label for="message">Additional Details</label>
+        <textarea id="message" rows="4" placeholder="Describe your issue..."></textarea>
+
+        <button type="submit">Submit Request</button>
+        <div class="success-message">✅ Your request has been submitted!</div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        document.querySelector(".success-message").style.display = "block";
+        document.getElementById("quoteForm").reset();
+    });
+</script>
+
+</body>
+</html>
