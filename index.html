@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techverse Innovaters | Cutting-edge Technology Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="JS/script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans antialiased bg-white">
+
+    <!-- Navbar -->
+    <nav class="p-5 px-20">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logo.png" alt="Techverse">
+                
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Service</a></li>            
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="Services/qoute.html"> <button class="register">Get a Quote</button> </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="p-20 hero">
+        <div class="hero-text">
+            <h1>Transforming Ideas Into Tech Reality</h1>
+            <p>Your premier destination for cutting-edge technology solutions. Whether you need powerful PCs, sleek laptops, or innovative iPads, we've got you covered with the latest and greatest in tech.</p>
+            <button><a href="#services">Explore Now</a></button>
+        </div>
+        <div class="hero-image">
+            <img src="hero.png" alt="Service" style="width: 200%;">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="p-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-laptop text-4xl text-gray-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Laptop Repair</h3>
+                    <p>Expert repair services for all laptop brands and models.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-desktop text-4xl text-gray-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">PC Building</h3>
+                    <p>Custom PC builds tailored to your needs and preferences.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-tablet-alt text-4xl text-gray-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">iPad Services</h3>
+                    <p>Comprehensive services for iPads including repairs and upgrades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- See More Button Section -->
+    <div class="flex justify-center my-8">
+        <a href="Services/services.html" rel="noopener noreferrer"
+            class="text-white px-6 py-3 rounded-md hover:opacity-90 transition text-lg font-semibold" style="background-color: #00cc66;">
+            See More
+        </a>
+    </div>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+            <form id="contact-form" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" class="w-full border border-gray-300 p-2 rounded" rows="4"
+                        required></textarea>
+                </div>
+                <button type="submit"
+                    class="text-white px-4 py-2 rounded-md hover:opacity-90 transition" style="background-color: #00cc66;">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    <div class="px-20 footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="Services/services.html">Services</a></li>
+                <li><a href="Services/qoute.html">Get a qoute</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>123techstreet innovation city</p>
+            <p>info@techverse.com</p>
+            <p>+92123456789</p>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+
+</html>
